@@ -1,0 +1,19 @@
+% This input should work with a dense matrix
+% Note that the interpreter is not case-sensitive
+HELP
+SHOW_RESULTS on
+A = read_file dmatrix1.txt
+B = read_file smatrix1.txt
+C = A'
+% The following command should not work
+D = A * A
+% The following commands should work
+D = A * C
+E = C * A
+F = D * D
+G = D *01 D
+SHOW_VARS
+F[0,0]
+F[0,1]
+F[1,1]
+QUIT

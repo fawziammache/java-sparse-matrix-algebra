@@ -1,0 +1,20 @@
+% This input should not work with a dense matrix
+% ... Pro4_utorid.readFile has to use a sparse matrix
+% Note that the interpreter is not case-sensitive
+HELP
+SHOW_RESULTS off
+A = read_file smatrix2.txt
+B = read_file dmatrix2.txt
+% The following commands should work
+C = A'
+D = A * A
+D = A * C
+E = C * A
+F = D * D
+G = D *01 D
+SHOW_VARS
+F[0,0]
+F[0,1]
+F[1,1]
+F[100,100]
+QUIT
